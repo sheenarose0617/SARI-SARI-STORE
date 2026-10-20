@@ -1,0 +1,64 @@
+class Product {
+  String name;
+  double price;
+  int _stock;
+
+  Product(this.name, this.price, int stock)
+      : _stock = stock;
+
+  int get stock => _stock;
+
+  void displayInfo() {
+    print('Product: $name');
+    print('Price: PHP ${price.toStringAsFixed(2)}');
+    print('Stock: $_stock pieces');
+    print('-------------------------');
+  }
+
+  void restock(int quantity) {
+    if (quantity > 0) {
+      _stock += quantity;
+      print('$name restocked by $quantity pieces.');
+    } else {
+      print('Invalid quantity.');
+    }
+  }
+  
+  void sell(int quantity) {
+    if (quantity <= 0) {
+      print('Invalid quantity.');
+    } else if (quantity <= _stock) {
+      _stock -= quantity;
+      print('$quantity $name sold successfully.');
+    } else {
+      print('Not enough stock for $name.');
+    }
+  }
+}
+
+void main() {
+  Product product1 = Product('Rice', 55.00, 20);
+  Product product2 = Product('Canned Sardines', 25.00, 15);
+  Product product3 = Product('Instant Noodles', 15.00, 30);
+
+  List<Product> inventory = [
+    product1,
+    product2,
+    product3
+  ];
+
+  print('=== SARI-SARI STORE INVENTORY ===\n');
+
+  for (Product product in inventory) {
+    product.displayInfo();
+  }
+
+  product1.sell(5);
+  product2.restock(10);
+
+  print('\n=== UPDATED INVENTORY ===\n');
+
+  for (Product product in inventory) {
+    product.displayInfo();
+  }
+}
