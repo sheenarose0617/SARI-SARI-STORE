@@ -1,0 +1,31 @@
+=== SARI-SARI STORE INVENTORY ===
+
+Product: Rice
+Price: PHP 55.00
+Stock: 20 pieces
+-------------------------
+Product: Canned Sardines
+Price: PHP 25.00
+Stock: 15 pieces
+-------------------------
+Product: Instant Noodles
+Price: PHP 15.00
+Stock: 30 pieces
+-------------------------
+5 Rice sold successfully.
+Canned Sardines restocked by 10 pieces.
+
+=== UPDATED INVENTORY ===
+
+Product: Rice
+Price: PHP 55.00
+Stock: 15 pieces
+-------------------------
+Product: Canned Sardines
+Price: PHP 25.00
+Stock: 25 pieces
+-------------------------
+Product: Instant Noodles
+Price: PHP 15.00
+Stock: 30 pieces
+-------------------------
